@@ -56,7 +56,7 @@ app.delete('/todo/delete/:id', async(req, res)=>{
 
 
 //route to change complete attribute status for the todo application
-app.put('/todo/complete/:id', async(req, res)=>{   
+app.get('/todo/complete/:id', async(req, res)=>{   
     try{
         const todo = await Todo.findById(req.params.id);
         todo.complete = !todo.complete;
